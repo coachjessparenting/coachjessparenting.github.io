@@ -1,847 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parenting Course Interest Form | Coach Jess</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Family Reset | A 4-Week Parenting Intensive with Coach Jess</title>
+<meta name="description" content="A 4-week in-person parenting intensive in Ellensburg. Go from overwhelmed and reactive to calmly leading your kids. Starts July 21. 15 seats.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Belleza&family=Rosario:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pine: #4F5F4C;
+    --pine-deep: #3D4A3B;
+    --cream: #EFE7D9;
+    --cream-light: #F6F1E7;
+    --camel: #B98963;
+    --rust: #A84A32;
+    --sage: #C7CDBE;
+    --ink: #33392F;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+  body {
+    font-family: 'Rosario', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  h1, h2, h3 { font-family: 'Cardo', serif; font-weight: 700; line-height: 1.15; color: var(--pine-deep); }
+  .eyebrow {
+    font-family: 'Belleza', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.78rem;
+    color: var(--rust);
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 72px 0; }
 
-  <!-- Open Graph / Link Preview -->
-  <meta property="og:title" content="6-Week Parenting Course | Coach Jess Parenting" />
-  <meta property="og:description" content="You don't need to try harder. You need a bigger toolbox. A Positive Discipline certified 6-week parenting course in Ellensburg, WA." />
-  <meta property="og:image" content="https://coachjessparenting.github.io/og-image.jpg" />
-  <meta property="og:url" content="https://coachjessparenting.github.io/parenting-course.html" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="6-Week Parenting Course | Coach Jess Parenting" />
-  <meta name="twitter:description" content="You don't need to try harder. You need a bigger toolbox." />
-  <meta name="twitter:image" content="https://coachjessparenting.github.io/og-image.jpg" />
+  /* HERO */
+  .hero {
+    background: var(--pine);
+    color: var(--cream);
+    padding: 84px 0 72px;
+    text-align: center;
+  }
+  .hero .eyebrow { color: var(--sage); margin-bottom: 22px; }
+  .hero h1 { color: var(--cream-light); font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 8px; }
+  .hero h1 em { font-style: italic; color: var(--camel); }
+  .hero .sub {
+    font-size: 1.1rem;
+    color: var(--sage);
+    max-width: 480px;
+    margin: 20px auto 0;
+  }
+  .hero .meta {
+    margin-top: 34px;
+    font-family: 'Belleza', sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    color: var(--cream);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .meta span::after { content: "·"; margin-left: 10px; color: var(--camel); }
+  .meta span:last-child::after { content: ""; }
+  .hero .cta-row { margin-top: 36px; }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet" />
+  /* BUTTONS */
+  .btn {
+    display: inline-block;
+    font-family: 'Belleza', sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 16px 34px;
+    border-radius: 3px;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:focus-visible { outline: 3px solid var(--camel); outline-offset: 3px; }
+  .btn-primary { background: var(--rust); color: var(--cream-light); }
+  .btn-primary:hover { background: #8F3E2A; transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--pine-deep);
+    border: 1.5px solid var(--pine);
+    margin-left: 0;
+  }
+  .btn-secondary:hover { background: var(--sage); }
+  .hero .btn-secondary { color: var(--cream); border-color: var(--sage); }
+  .hero .btn-secondary:hover { background: var(--pine-deep); }
+  .cta-note { font-size: 0.85rem; margin-top: 14px; opacity: 0.85; }
 
-  <style>
-    :root {
-      --soil: #3D2314;
-      --terra: #C4622D;
-      --terra-light: #D4723D;
-      --sage: #7D9B76;
-      --linen: #F5EFE6;
-      --cream: #FDFAF6;
-      --warm-mid: #F0EBE3;
-      --brown-mid: #5C4030;
-      --muted: #8B7355;
-      --border: #D4C5B0;
-      --accent-warm: #C4A882;
-      --text-light: #A89880;
-    }
+  /* MIRROR / PAIN */
+  .mirror { background: var(--cream); }
+  .mirror h2 { font-size: clamp(1.5rem, 4.5vw, 2rem); margin-bottom: 34px; }
+  .quote-stack { display: flex; flex-direction: column; gap: 18px; }
+  .quote {
+    font-family: 'Cardo', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--pine-deep);
+    border-left: 3px solid var(--camel);
+    padding: 6px 0 6px 20px;
+  }
+  .mirror .after {
+    margin-top: 36px;
+    font-size: 1.05rem;
+  }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* SIGNATURE: THE SHIFT */
+  .shift { background: var(--cream-light); border-top: 1px solid var(--sage); border-bottom: 1px solid var(--sage); }
+  .shift h2 { text-align: center; font-size: clamp(1.5rem, 4.5vw, 2rem); }
+  .shift .lede { text-align: center; max-width: 520px; margin: 14px auto 44px; }
+  .shift-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1.5px solid var(--pine);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .shift-col { padding: 30px 26px; }
+  .shift-col.now { background: var(--cream); }
+  .shift-col.then { background: var(--pine); color: var(--cream-light); }
+  .shift-col h3 {
+    font-family: 'Belleza', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+  }
+  .shift-col.now h3 { color: var(--rust); }
+  .shift-col.then h3 { color: var(--camel); }
+  .shift-col.then li::marker { color: var(--camel); }
+  .shift-col ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .shift-col li { padding-left: 22px; position: relative; font-size: 0.98rem; }
+  .shift-col.now li::before { content: "×"; position: absolute; left: 0; color: var(--rust); font-weight: 600; }
+  .shift-col.then li::before { content: "→"; position: absolute; left: 0; color: var(--camel); }
+  @media (max-width: 560px) {
+    .shift-grid { grid-template-columns: 1fr; }
+  }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--linen);
-      color: var(--soil);
-      -webkit-font-smoothing: antialiased;
-    }
+  /* WEEKS */
+  .weeks h2 { font-size: clamp(1.5rem, 4.5vw, 2rem); margin-bottom: 12px; }
+  .weeks .lede { margin-bottom: 40px; max-width: 540px; }
+  .week {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 18px;
+    padding: 26px 0;
+    border-top: 1px solid var(--sage);
+  }
+  .week:last-of-type { border-bottom: 1px solid var(--sage); }
+  .week-num {
+    font-family: 'Cardo', serif;
+    font-size: 1.5rem;
+    color: var(--camel);
+    line-height: 1.4;
+  }
+  .week-num small {
+    display: block;
+    font-family: 'Belleza', sans-serif;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--pine);
+    margin-bottom: 4px;
+  }
+  .week h3 { font-size: 1.2rem; margin-bottom: 6px; }
+  .week p { font-size: 0.98rem; }
 
-    .page { display: none; }
-    .page.active { display: block; }
+  /* DETAILS + PRICE */
+  .details { background: var(--pine); color: var(--cream); }
+  .details h2 { color: var(--cream-light); text-align: center; font-size: clamp(1.5rem, 4.5vw, 2rem); margin-bottom: 40px; }
+  .fact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 30px;
+    margin-bottom: 48px;
+  }
+  .fact h3 {
+    font-family: 'Belleza', sans-serif;
+    font-weight: 400;
+    color: var(--camel);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+  .fact p { color: var(--cream-light); font-size: 1rem; }
+  .price-box {
+    background: var(--cream-light);
+    color: var(--ink);
+    border-radius: 5px;
+    padding: 42px 34px;
+    text-align: center;
+  }
+  .price-box .eyebrow { margin-bottom: 14px; }
+  .price-line {
+    font-family: 'Cardo', serif;
+    color: var(--pine-deep);
+  }
+  .price-line .was {
+    font-size: 1.3rem;
+    text-decoration: line-through;
+    text-decoration-color: var(--rust);
+    opacity: 0.55;
+    margin-right: 12px;
+  }
+  .price-line .now-price { font-size: 3.2rem; font-weight: 700; }
+  .price-box .per { font-size: 0.95rem; margin-top: 6px; }
+  .price-box .cta-row { margin-top: 28px; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+  .price-box .cta-note { color: var(--ink); opacity: 0.75; }
+  .seats {
+    font-family: 'Belleza', sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--rust);
+    margin-top: 20px;
+  }
 
-    /* TYPOGRAPHY */
-    .script { font-family: 'Dancing Script', cursive; color: var(--terra); font-size: 22px; margin-bottom: 10px; display: block; }
-    .serif { font-family: 'Playfair Display', serif; }
+  /* ABOUT */
+  .about { display: grid; gap: 20px; }
+  .family-photo {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto 10px;
+    display: block;
+    border-radius: 6px;
+    border: 6px solid var(--cream-light);
+    box-shadow: 0 10px 30px rgba(61, 74, 59, 0.18);
+  }
+  .about h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
+  .about .sig {
+    font-family: 'Cardo', serif;
+    font-style: italic;
+    color: var(--camel);
+    font-size: 1.15rem;
+  }
 
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .fade-up { animation: fadeUp 0.6s ease both; }
-    .d1 { animation-delay: 0.1s; }
-    .d2 { animation-delay: 0.2s; }
-    .d3 { animation-delay: 0.35s; }
-    .d4 { animation-delay: 0.5s; }
+  /* FAQ */
+  .faq { background: var(--cream-light); border-top: 1px solid var(--sage); }
+  .faq h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); margin-bottom: 28px; }
+  .faq details {
+    border-top: 1px solid var(--sage);
+    padding: 18px 0;
+  }
+  .faq details:last-of-type { border-bottom: 1px solid var(--sage); }
+  .faq summary {
+    font-family: 'Cardo', serif;
+    font-weight: 700;
+    font-size: 1.08rem;
+    color: var(--pine-deep);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--camel); font-size: 1.4rem; font-family: 'Rosario', sans-serif; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { margin-top: 12px; font-size: 0.98rem; }
 
-    @keyframes scaleIn {
-      from { opacity: 0; transform: scale(0.96); }
-      to   { opacity: 1; transform: scale(1); }
-    }
-    .scale-in { animation: scaleIn 0.5s ease both; }
+  /* FINAL CTA */
+  .final { text-align: center; }
+  .final h2 { font-size: clamp(1.6rem, 5vw, 2.2rem); margin-bottom: 16px; }
+  .final p { max-width: 480px; margin: 0 auto 30px; }
+  .final .cta-row { display: flex; flex-direction: column; gap: 14px; align-items: center; }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(160deg, #3D2314 0%, #5C3520 60%, #7D4A2A 100%);
-      padding: 64px 24px 72px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 300px; height: 300px;
-      border-radius: 50%;
-      background: rgba(196,98,45,0.15);
-      pointer-events: none;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: -40px;
-      width: 200px; height: 200px;
-      border-radius: 50%;
-      background: rgba(125,155,118,0.12);
-      pointer-events: none;
-    }
-    .hero-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
-
-    .badge {
-      display: inline-block;
-      background: rgba(196,98,45,0.2);
-      border: 1px solid rgba(196,98,45,0.4);
-      border-radius: 99px;
-      padding: 6px 16px;
-      margin-bottom: 20px;
-      font-size: 12px;
-      color: #F0C9A8;
-      font-weight: 500;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(30px, 6vw, 46px);
-      color: #F5EFE6;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-    .hero h1 em { color: #C4A882; font-style: italic; }
-    .hero p { font-size: 17px; color: #D4B896; line-height: 1.75; margin-bottom: 32px; max-width: 520px; }
-
-    /* BUTTONS */
-    .btn-primary {
-      display: inline-block;
-      padding: 16px 36px;
-      background: var(--terra);
-      color: #F5EFE6;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 600;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      transition: all 0.2s;
-      text-decoration: none;
-    }
-    .btn-primary:hover { background: var(--terra-light); transform: translateY(-2px); }
-    .btn-primary.full { width: 100%; text-align: center; }
-    .btn-primary.dark { background: var(--soil); box-shadow: none; }
-    .btn-primary.dark:hover { background: var(--terra); }
-
-    .btn-back {
-      background: none; border: none; cursor: pointer;
-      color: var(--muted); font-family: 'DM Sans', sans-serif;
-      font-size: 14px; padding: 0; margin-bottom: 32px;
-      display: inline-block;
-    }
-    .btn-back:hover { color: var(--terra); }
-
-    /* SECTIONS */
-    .section { padding: 64px 24px; }
-    .section-inner { max-width: 640px; margin: 0 auto; }
-    .section.cream { background: var(--cream); }
-    .section.linen { background: var(--linen); }
-    .section.warm { background: var(--warm-mid); }
-    .section.soil { background: var(--soil); }
-    .section.sage { background: var(--sage); }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(24px, 4vw, 30px);
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 20px;
-    }
-    .section.soil .section-title { color: #F5EFE6; }
-    .section.sage .section-title { color: #F5EFE6; }
-
-    .section-body { font-size: 16px; color: var(--brown-mid); line-height: 1.8; margin-bottom: 20px; }
-    .section.soil .section-body { color: #C4B09A; }
-
-    /* CHECKLIST ITEMS */
-    .check-list { display: grid; gap: 12px; }
-    .check-item {
-      display: flex; gap: 14px; align-items: flex-start;
-      background: var(--linen); border-radius: 10px; padding: 14px 18px;
-    }
-    .section.cream .check-item { background: var(--linen); }
-    .section.linen .check-item { background: var(--cream); }
-    .section.warm .check-item { background: var(--cream); }
-    .check-item .icon { font-size: 20px; min-width: 26px; }
-    .check-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--terra); min-width: 8px; margin-top: 8px; }
-    .check-item p { font-size: 15px; line-height: 1.6; }
-
-    /* WEEK CARDS */
-    .week-cards { display: grid; gap: 20px; }
-    .week-card {
-      background: var(--cream); border-radius: 12px;
-      padding: 22px 24px; border-left: 4px solid var(--terra);
-    }
-    .week-label {
-      font-size: 12px; color: var(--terra); font-weight: 600;
-      letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px;
-    }
-    .week-card h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px; font-weight: 600; margin-bottom: 8px;
-    }
-    .week-card p { font-size: 14px; color: #6B5040; line-height: 1.6; }
-
-    /* QUOTE BLOCK */
-    .quote-block {
-      background: var(--soil); border-radius: 14px; padding: 28px;
-      margin-top: 28px;
-    }
-    .quote-block p {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px; color: #F5EFE6; font-weight: 600;
-      line-height: 1.6; font-style: italic; margin-bottom: 10px;
-    }
-    .quote-sig { font-family: 'Dancing Script', cursive; font-size: 16px; color: #C4A882; }
-
-    /* CREDENTIAL TAGS */
-    .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 0; }
-    .cred-tag {
-      background: rgba(196,98,45,0.2);
-      border: 1px solid rgba(196,98,45,0.4);
-      border-radius: 99px; padding: 6px 14px;
-      font-size: 13px; color: #F0C9A8;
-    }
-
-    /* FORM WRAPPER */
-    .form-page { background: var(--linen); min-height: 100vh; padding: 40px 24px 80px; }
-    .form-page-inner { max-width: 640px; margin: 0 auto; }
-    .form-card {
-      background: var(--cream); border-radius: 16px;
-      padding: 32px 28px; box-shadow: 0 2px 24px rgba(61,35,20,0.08);
-    }
-
-    /* FORM SECTIONS */
-    .form-section { margin-bottom: 32px; }
-    .form-section h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px; color: var(--soil); font-weight: 600; margin-bottom: 4px;
-    }
-    .form-section .hint { font-size: 14px; color: var(--muted); margin-bottom: 16px; display: block; }
-    .form-divider { border: none; border-top: 1px solid #E8DDD0; margin-bottom: 32px; }
-
-    /* INPUTS */
-    .field-label { font-size: 14px; color: var(--brown-mid); font-weight: 500; margin-bottom: 8px; display: block; }
-    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-    .field-row-single { margin-bottom: 14px; }
-
-    input[type="text"], input[type="email"], input[type="tel"], textarea, select {
-      width: 100%; padding: 12px 16px;
-      border: 1.5px solid var(--border); border-radius: 8px;
-      background: #FDFAF6; color: var(--soil);
-      font-family: 'DM Sans', sans-serif; font-size: 15px;
-      transition: border-color 0.2s, box-shadow 0.2s; outline: none;
-      -webkit-appearance: none;
-    }
-    input:focus, textarea:focus, select:focus {
-      border-color: var(--terra);
-      box-shadow: 0 0 0 3px rgba(196,98,45,0.12);
-    }
-    input::placeholder, textarea::placeholder { color: var(--text-light); }
-    textarea { resize: vertical; }
-
-    /* TAG BUTTONS */
-    .tag-group { display: flex; flex-wrap: wrap; gap: 10px; }
-    .tag-btn {
-      padding: 9px 18px; border-radius: 99px;
-      border: 1.5px solid var(--terra);
-      background: transparent; color: var(--terra); cursor: pointer;
-      font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
-      transition: all 0.18s; white-space: nowrap;
-    }
-    .tag-btn.active { background: var(--terra); color: #FDFAF6; }
-    .tag-btn:hover:not(.active) { background: rgba(196,98,45,0.08); }
-
-    /* DAY BUTTONS */
-    .day-btn {
-      width: 44px; height: 44px; border-radius: 50%;
-      border: 1.5px solid var(--terra);
-      background: transparent; color: var(--terra); cursor: pointer;
-      font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
-      transition: all 0.18s; display: inline-flex;
-      align-items: center; justify-content: center;
-    }
-    .day-btn.active { background: var(--terra); color: #FDFAF6; }
-    .day-btn:hover:not(.active) { background: rgba(196,98,45,0.08); }
-    .day-group { display: flex; gap: 8px; flex-wrap: wrap; }
-
-    /* CHECKBOX GRID */
-    .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
-    .check-label { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
-    .check-label input[type="checkbox"],
-    .check-label input[type="radio"] {
-      width: 18px; height: 18px; min-width: 18px;
-      accent-color: var(--terra); cursor: pointer; margin-top: 2px;
-    }
-    .check-label span { font-size: 14px; line-height: 1.4; }
-
-    /* INTEREST CARDS */
-    .interest-cards { display: flex; flex-direction: column; gap: 10px; }
-    .interest-card {
-      display: flex; align-items: flex-start; gap: 12px;
-      border: 1.5px solid var(--border); border-radius: 12px;
-      padding: 14px 16px; cursor: pointer;
-      background: var(--cream); transition: all 0.18s;
-    }
-    .interest-card:hover { border-color: var(--accent-warm); }
-    .interest-card.active { border-color: var(--terra); background: #FDF3EC; }
-    .radio-dot {
-      width: 20px; height: 20px; border-radius: 50%;
-      border: 2px solid var(--accent-warm);
-      background: transparent; min-width: 20px; margin-top: 2px;
-      display: flex; align-items: center; justify-content: center;
-      transition: all 0.18s; flex-shrink: 0;
-    }
-    .interest-card.active .radio-dot { background: var(--terra); border-color: var(--terra); }
-    .radio-dot-inner { width: 7px; height: 7px; border-radius: 50%; background: white; display: none; }
-    .interest-card.active .radio-dot-inner { display: block; }
-    .interest-card-text strong { font-size: 15px; display: block; margin-bottom: 2px; }
-    .interest-card-text span { font-size: 13px; color: var(--muted); }
-
-    /* RADIO GROUP */
-    .radio-group { display: flex; flex-direction: column; gap: 10px; }
-
-    /* CHILDCARE NOTE */
-    .info-box {
-      background: #FDF3EC; border-radius: 10px;
-      padding: 14px 16px; margin-bottom: 16px;
-      border-left: 3px solid var(--terra);
-      font-size: 13px; color: #5C3020; line-height: 1.6;
-    }
-
-    /* SUBMIT */
-    .submit-btn {
-      width: 100%; padding: 16px;
-      background: var(--soil); color: #F5EFE6;
-      border: none; border-radius: 10px; cursor: pointer;
-      font-family: 'Playfair Display', serif;
-      font-size: 18px; font-weight: 600;
-      transition: all 0.2s; margin-top: 8px;
-    }
-    .submit-btn:hover { background: var(--terra); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(196,98,45,0.35); }
-    .submit-btn:disabled { background: var(--text-light); cursor: not-allowed; transform: none; box-shadow: none; }
-    .submit-note { font-size: 12px; color: var(--text-light); text-align: center; margin-top: 12px; }
-
-    /* SUCCESS */
-    .success-page {
-      min-height: 100vh; background: var(--linen);
-      display: flex; align-items: center; justify-content: center;
-      padding: 40px 20px; text-align: center;
-    }
-    .success-inner { max-width: 520px; }
-    .success-emoji { font-size: 52px; margin-bottom: 20px; }
-    .success-inner h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; margin-bottom: 16px; }
-    .success-inner p { font-size: 16px; color: var(--brown-mid); line-height: 1.7; margin-bottom: 24px; }
-    .success-sig { font-family: 'Dancing Script', cursive; font-size: 22px; color: var(--terra); }
-
-    /* SAGE BAND */
-    .sage-band { background: var(--sage); padding: 44px 24px; }
-    .sage-band-inner { max-width: 600px; margin: 0 auto; text-align: center; }
-    .sage-band h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: #F5EFE6; font-weight: 600; line-height: 1.5; margin-bottom: 12px; }
-    .sage-band p { font-size: 15px; color: #D4EDD0; line-height: 1.7; }
-
-    /* CTA SECTION */
-    .cta-section { background: var(--cream); padding: 64px 24px; text-align: center; }
-    .cta-inner { max-width: 480px; margin: 0 auto; }
-    .cta-inner h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; margin-bottom: 12px; }
-    .cta-inner p { font-size: 16px; color: #6B5040; line-height: 1.6; margin-bottom: 28px; }
-    .cta-note { font-size: 13px; color: var(--text-light); margin-top: 12px; }
-
-    /* LOGO */
-    .logo-block { margin-bottom: 28px; }
-    .logo-name { font-family: 'Dancing Script', cursive; font-size: 18px; color: #C4A882; margin-bottom: 4px; }
-    .logo-line { width: 40px; height: 2px; background: var(--terra); }
-
-    /* HERO SUBTEXT */
-    .hero-sub { font-size: 13px; color: #A8887A; margin-top: 10px; }
-
-    @media (max-width: 520px) {
-      .field-row { grid-template-columns: 1fr; }
-      .check-grid { grid-template-columns: 1fr; }
-      .form-card { padding: 24px 18px; }
-    }
-  </style>
+  footer {
+    background: var(--pine-deep);
+    color: var(--sage);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 0.85rem;
+    font-family: 'Belleza', sans-serif;
+    letter-spacing: 0.1em;
+  }
+</style>
 </head>
 <body>
 
-<!-- LANDING PAGE -->
-<div id="page-landing" class="page active">
-
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-inner">
-      <div class="logo-block fade-up">
-        <div class="logo-name">Coach Jess Parenting</div>
-        <div class="logo-line"></div>
-      </div>
-      <div class="badge fade-up d1">Positive Discipline Certified · 6-Week Parenting Course · Ellensburg, WA</div>
-      <h1 class="fade-up d2">
-        You don't need to try harder.<br>
-        <em>You need a bigger toolbox.</em>
-      </h1>
-      <p class="fade-up d3">
-        A small-group, 6-week course that takes you from overwhelmed and reactive to calmly and confidently leading your family, without threats, bribes, or losing it.
-      </p>
-      <div class="fade-up d4">
-        <button class="btn-primary" onclick="showPage('page-form')">I'm Interested, Tell Me More</button>
-        <div class="hero-sub">No commitment · Spaces are limited</div>
-      </div>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">In Person · Ellensburg · Starts July 21</p>
+    <h1>Stop managing behavior.<br><em>Start leading your family.</em></h1>
+    <p class="sub">The Family Reset is a 4-week, in-person parenting intensive for parents who are done reacting their way through the day and ready to raise their kids on purpose. Small group. Real practice. Lasting change.</p>
+    <div class="meta">
+      <span>Tuesdays at 7pm</span>
+      <span>4 weeks</span>
+      <span>15 seats only</span>
     </div>
-  </div>
-
-  <!-- 6 Weeks From Now -->
-  <div class="section cream">
-    <div class="section-inner">
-      <span class="script">Imagine yourself six weeks from now...</span>
-      <h2 class="section-title">You see a meltdown coming, and you know exactly what to do.</h2>
-      <p class="section-body">
-        Not because you've become a more patient person. Not because your kids suddenly changed. But because you finally understand <em>why</em> it's happening. And you have the right tool for the moment.
-      </p>
-      <div class="check-list">
-        <div class="check-item"><div class="check-dot"></div><p>You stop dreading the hard parts of the day</p></div>
-        <div class="check-item"><div class="check-dot"></div><p>You don't lie awake replaying the moment you lost it</p></div>
-        <div class="check-item"><div class="check-dot"></div><p>Your kids feel your leadership, and they actually respond to it</p></div>
-        <div class="check-item"><div class="check-dot"></div><p>You repair quickly when things go sideways, and it brings you closer</p></div>
-        <div class="check-item"><div class="check-dot"></div><p>You feel calm and confident in the role you were made for</p></div>
-      </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#save-my-spot">Save my spot for $97</a>
     </div>
+    <p class="cta-note">Founding price. Future groups will be $197.</p>
   </div>
+</header>
 
-  <!-- Kids Transformation -->
-  <div class="section warm">
-    <div class="section-inner">
-      <span class="script">And here's what changes in your kids</span>
-      <h2 class="section-title">Right now, it might feel like all you notice is the hard stuff.</h2>
-      <p class="section-body">
-        The defiance. The meltdowns. The moments that make you question everything you're doing. When all you can see is the behavior that triggers you, it's hard to feel like any of this is working.
-      </p>
-      <p class="section-body">
-        This course shifts that. You'll learn to see what's underneath the behavior, the developmental need trying to be met, the life skill trying to emerge. And in the hardest moments, instead of just trying to survive, you'll know: <em>I am building something in this child that will matter for the rest of their life.</em>
-      </p>
-      <div class="check-list">
-        <div class="check-item"><span class="icon">🌱</span><p>Fewer explosive moments, because you're responding to the root instead of the surface</p></div>
-        <div class="check-item"><span class="icon">💬</span><p>Your child starts communicating what they need instead of melting down to get it</p></div>
-        <div class="check-item"><span class="icon">👀</span><p>You start catching them doing things right, and so do they</p></div>
-        <div class="check-item"><span class="icon">💪</span><p>You see resilience, emotional intelligence, and real capability taking shape in your child</p></div>
-        <div class="check-item"><span class="icon">🤝</span><p>The hard moments stop being proof something is broken and start being proof something is growing</p></div>
+<section class="mirror">
+  <div class="wrap">
+    <p class="eyebrow">If this is you</p>
+    <h2>You love your kids. You just want to feel confident in how you're raising them.</h2>
+    <div class="quote-stack">
+      <p class="quote">"I'm stuck in the same loops, and nothing I try sticks."</p>
+      <p class="quote">"The sibling fighting is constant."</p>
+      <p class="quote">"I'm reacting all day instead of leading. And I hate how I sound."</p>
+      <p class="quote">"I know how I don't want to parent. I'm just not sure what to do instead."</p>
+      <p class="quote">"My spouse and I aren't on the same page."</p>
+      <p class="quote">"I'm so tired. I thought I would enjoy this more."</p>
+    </div>
+    <p class="after">Different doors, same room. Underneath all of it is the same trap: behavior management. Spending every day reacting to hard moments, putting out fires, throwing spaghetti at the wall and hoping something sticks. But you didn't become a parent to manage behavior. You became a parent to raise capable, kind adults. To plant values on purpose and trust they're growing, even on the hard days. That takes a different posture. Not the drill sergeant. Not the doormat. The leader. That's what we build in four weeks, together, in a room of parents working through the same real stuff.</p>
+  </div>
+</section>
+
+<section class="shift">
+  <div class="wrap">
+    <h2>Four weeks from now</h2>
+    <p class="lede">This isn't a parenting class where you take notes and nothing changes. It's a reset for how your whole home runs. Here's the before and after, for you and your kids.</p>
+    <div class="shift-grid">
+      <div class="shift-col now">
+        <h3>Right now</h3>
+        <ul>
+          <li>Days spent managing behavior, putting out fires, bracing for the next hard moment</li>
+          <li>Trying every tip and trick, keeping none of them, back at square one</li>
+          <li>Sibling conflict on repeat</li>
+          <li>Running on empty and counting down to bedtime</li>
+          <li>Parenting on defense with no clear picture of what you're building toward</li>
+        </ul>
       </div>
-      <div class="quote-block">
-        <p>"You are not raising a child. You are raising the adult they are going to become. Every hard moment is a chance to build something into them that lasts."</p>
-        <div class="quote-sig">Coach Jess</div>
+      <div class="shift-col then">
+        <h3>After the reset</h3>
+        <ul>
+          <li>A clear framework, so in the hard moment you know what to do and why</li>
+          <li>Kids building real life skills, not just complying for the moment</li>
+          <li>Siblings learning to operate as a team</li>
+          <li>Energy coming back because your home runs smoother and you're not doing it alone</li>
+          <li>Confidence that the seeds you're planting today are growing the adults you're raising</li>
+        </ul>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Toolbox -->
-  <div class="section linen">
-    <div class="section-inner">
-      <span class="script">The problem isn't you</span>
-      <h2 class="section-title">If you've been swinging the same hammer at every parenting problem, that's a toolbox problem, not a you problem.</h2>
-      <p class="section-body">
-        Maybe that hammer is yelling. Maybe it's gentle redirection that gets ignored every single time. Maybe it's timeouts, or counting to three, or bribing with screen time just to get through the afternoon. And sometimes it works, a little, sometimes, in certain situations. But you know in your gut it doesn't work for <em>everything</em>. Because it was never designed to.
-      </p>
-      <p class="section-body">
-        Positive Discipline gives you a full toolkit, not one strategy for every moment, but the ability to read what's actually happening and reach for exactly the right tool. Tantrums, defiance, sibling fights, power struggles, big emotions. Each one has its own anatomy. This course teaches you to see it.
-      </p>
-      <div class="quote-block">
-        <p>"If you want a more robust, complete toolbox, and to know the exact tool, when to reach for it, and why it works. This course was built for you."</p>
-        <div class="quote-sig">Coach Jess</div>
+<section class="weeks">
+  <div class="wrap">
+    <p class="eyebrow">Inside the four weeks</p>
+    <h2>What you'll walk away with</h2>
+    <p class="lede">This is the group version of my one on one coaching: the same transformation, made more accessible, and richer because we learn from each other. Every session is live, practical, and built around your real hard moments.</p>
+
+    <div class="week">
+      <div class="week-num">&#10022;</div>
+      <div>
+        <h3>The family centered framework</h3>
+        <p>The paradigm shift underneath everything else: moving from the child centered default, where the whole home orbits around managing kids, to leading as a family unit. You'll get clear on the values you're instilling and what you're actually building toward.</p>
+      </div>
+    </div>
+
+    <div class="week">
+      <div class="week-num">&#10022;</div>
+      <div>
+        <h3>Practical tools for the hard moments</h3>
+        <p>Word for word tools for tantrums, defiance, not listening, and sibling conflict, practiced out loud on your real scenarios so they're in your hands when the moment hits.</p>
+      </div>
+    </div>
+
+    <div class="week">
+      <div class="week-num">&#10022;</div>
+      <div>
+        <h3>Tools for you, not just your kids</h3>
+        <p>How to be the calm, regulated parent even in the hardest moments. The parent you always pictured being is still in there, and these tools make that version of you accessible when you're currently stuck in reaction and overwhelm.</p>
+      </div>
+    </div>
+
+    <div class="week">
+      <div class="week-num">&#10022;</div>
+      <div>
+        <h3>A room of parents in it with you</h3>
+        <p>Real community, not a lecture. A space to talk through the hard parenting moments with people who get it, get on the same page as your spouse, and land on real solutions that create lasting change.</p>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Who It's For -->
-  <div class="section cream">
-    <div class="section-inner">
-      <span class="script">This is for you if...</span>
-      <h2 class="section-title">You hear yourself and hate it, but it just keeps coming out.</h2>
-      <div class="check-list">
-        <div class="check-item"><span class="icon">😤</span><p>You've tried gentle parenting and it made things worse, not better</p></div>
-        <div class="check-item"><span class="icon">🔁</span><p>You're stuck in the yell-apologize-repeat cycle and you're exhausted by it</p></div>
-        <div class="check-item"><span class="icon">🔨</span><p>You have one or two go-to moves and they don't always work, and you don't know what else to reach for</p></div>
-        <div class="check-item"><span class="icon">📚</span><p>You've read the books, watched the reels, and still fall apart in the actual moment</p></div>
-        <div class="check-item"><span class="icon">💔</span><p>You love your kids so much it hurts, and you wonder if they know it</p></div>
+<section class="details" id="save-my-spot">
+  <div class="wrap">
+    <h2>The details</h2>
+    <div class="fact-grid">
+      <div class="fact">
+        <h3>When</h3>
+        <p>Tuesdays at 7:00pm, starting July 21. Four sessions.</p>
+      </div>
+      <div class="fact">
+        <h3>Where</h3>
+        <p>In person in Ellensburg. Exact location sent when you sign up.</p>
+      </div>
+      <div class="fact">
+        <h3>Group size</h3>
+        <p>Capped at 15 so everyone gets coached, not lectured.</p>
+      </div>
+      <div class="fact">
+        <h3>Who it's for</h3>
+        <p>Parents of young kids who want to lead their family on purpose. Moms, dads, or both together. One price per family.</p>
       </div>
     </div>
-  </div>
-
-  <!-- What Changes -->
-  <div class="section linen">
-    <div class="section-inner">
-      <span class="script">What changes in 6 weeks</span>
-      <h2 class="section-title">This isn't another parenting theory.</h2>
-      <p class="section-body">It's a practical, Positive Discipline-based transformation you'll feel in your home by week two.</p>
-      <div class="week-cards">
-        <div class="week-card">
-          <div class="week-label">Weeks 1–2</div>
-          <h4>Understand why it's actually happening</h4>
-          <p>Finally get to the root of tantrums, defiance, and meltdowns, to understand why what you've been trying isn't working. This alone changes how you see everything.</p>
-        </div>
-        <div class="week-card">
-          <div class="week-label">Weeks 3–4</div>
-          <h4>Build your leadership toolkit</h4>
-          <p>Practical, in-the-moment tools for every type of hard moment, so you're never reaching for the same hammer again.</p>
-        </div>
-        <div class="week-card">
-          <div class="week-label">Weeks 5–6</div>
-          <h4>Create a proactive family culture</h4>
-          <p>Shift from putting out fires to preventing them. Build a dynamic where your kids listen, contribute, and genuinely thrive, and so do you.</p>
-        </div>
+    <div class="price-box">
+      <p class="eyebrow">Founding group price</p>
+      <p class="price-line"><span class="was">$197</span><span class="now-price">$97</span></p>
+      <p class="per">per family, for all four weeks</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://venmo.com/u/jessicalrickman">Pay $97 on Venmo</a>
+        <a class="btn btn-secondary" href="sms:+15033329572?body=Hi%20Jess!%20I%20want%20to%20reserve%20a%20spot%20in%20The%20Family%20Reset.">Text Jess to reserve, pay cash or check at week 1</a>
       </div>
+      <p class="cta-note">In your Venmo note, put your name and email so I can send location details.</p>
+      <p class="seats">15 seats. First come, first served.</p>
     </div>
   </div>
+</section>
 
-  <!-- About Jess -->
-  <div class="section soil">
-    <div class="section-inner">
-      <span class="script" style="color:#C4A882;">Your instructor</span>
-      <h2 class="section-title">I used to be the mom I swore I'd never be.</h2>
-      <p class="section-body">
-        I'm Jess, Certified Parenting Educator, mama of four, and founder of Coach Jess Parenting. I've lived the cycle. The yelling. The guilt. The "my kids need to be saved from me" feeling at the end of a hard day. I've tried every framework, burned out on gentle parenting, and come out the other side with something that actually works.
-      </p>
-      <p class="section-body">
-        I've studied parenting cross-culturally, trained in Positive Discipline, and spent years learning what the most capable, calm parents in the world actually do, and translating those into tools modern moms can use right now. I'm not a therapist and I don't talk like one. I teach parents how to lead their families on purpose.
-      </p>
-      <div class="tag-list">
-        <span class="cred-tag">Certified Parenting Educator</span>
-        <span class="cred-tag">Positive Discipline Trained</span>
-        <span class="cred-tag">Mother of 4</span>
-        <span class="cred-tag">Cross-Cultural Parenting Researcher</span>
-      </div>
+<section class="about">
+  <div class="wrap">
+    <img class="family-photo" src="jess-family.png" alt="Jess with her husband and four kids">
+    <p class="eyebrow">Your coach</p>
+    <h2>Hi, I'm Jess.</h2>
+    <p>I'm a formally trained parent educator, a mom of four, and someone who knows exactly what it feels like to be stuck in loops you can't seem to break, reacting all day and wondering if any of it is working. What I teach comes from two places: my formal training, and the paradigm shifts I made raising my own four kids, learning firsthand what unlocks when a home stops orbiting around managing children and starts running as a family unit.</p>
+    <p>Family centered instead of child centered. It changed everything in my home, and I've watched it change the families I work with. This is the first time I'm teaching it live to a group in Ellensburg, which is why the founding price exists. You get in early, and I get a room full of local families whose stories prove what this does.</p>
+    <p class="sig">Coach Jess · Family Centered Parenting</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Questions you might have</h2>
+    <details>
+      <summary>What ages is this for?</summary>
+      <p>The tools land best for parents of kids roughly 2 to 10, but the leadership framework works at any age. If you're not sure it fits your family, text me and ask.</p>
+    </details>
+    <details>
+      <summary>What if I miss a week?</summary>
+      <p>Life happens. You'll get the week's core material and your one shift to practice, and I'll catch you up so you don't fall behind the group.</p>
+    </details>
+    <details>
+      <summary>Can my spouse come too?</summary>
+      <p>Yes, please. One price covers your family, and this works fastest when both parents are running the same playbook.</p>
+    </details>
+    <details>
+      <summary>Do I need to bring my kids?</summary>
+      <p>No, this is for the grown-ups. Consider it a Tuesday evening that pays your whole family back.</p>
+    </details>
+    <details>
+      <summary>Is this gentle parenting?</summary>
+      <p>No, and it's not old-school authoritarian either. Gentle parenting asks you to defer. Authoritarian parenting asks you to control. I teach you to lead: warm, calm, and firmly in charge.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Your kids don't need a perfect parent.<br>They need one who leads on purpose.</h2>
+    <p>Four Tuesdays. Fifteen families. One reset. The founding price goes away when the seats do.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#save-my-spot">Save my spot for $97</a>
+      <a class="btn btn-secondary" href="sms:+15033329572?body=Hi%20Jess!%20I%20want%20to%20reserve%20a%20spot%20in%20The%20Family%20Reset.">Text Jess instead</a>
     </div>
   </div>
+</section>
 
-  <!-- Sage Band -->
-  <div class="sage-band">
-    <div class="sage-band-inner">
-      <h3>Parent education you can actually afford, with other moms who get it.</h3>
-      <p>Small group format means you're not alone in this. You hear other parents navigating the same things. You realize you are not failing. And it keeps the cost a fraction of one-on-one coaching.</p>
-    </div>
-  </div>
-
-  <!-- Final CTA -->
-  <div class="cta-section">
-    <div class="cta-inner">
-      <h2 class="serif">Ready to build a better toolbox?</h2>
-      <p>Fill out the 3-minute interest form. I'll use your answers to design a class built around the people actually in it. Right days, right time, childcare if needed.</p>
-      <button class="btn-primary" onclick="showPage('page-form')">Fill Out the Interest Form</button>
-      <div class="cta-note">No commitment. Enrollment requires full 6-week commitment.</div>
-    </div>
-  </div>
-
-</div><!-- /page-landing -->
-
-
-<!-- FORM PAGE -->
-<div id="page-form" class="page">
-  <div class="form-page">
-    <div class="form-page-inner">
-      <button class="btn-back" onclick="showPage('page-landing')">← Back</button>
-
-      <div style="margin-bottom:36px;">
-        <span class="script">Interest Form</span>
-        <h2 class="serif" style="font-size:28px;font-weight:700;line-height:1.3;margin-bottom:10px;">Tell me a little about you &amp; your family</h2>
-        <p style="font-size:15px;color:#6B5040;line-height:1.6;">No commitment. Your answers help me build a class designed around the people actually in it.</p>
-      </div>
-
-      <form id="intake-form" action="https://formspree.io/f/xwvyykbg" method="POST" onsubmit="handleSubmit(event)">
-
-        <div class="form-card">
-
-          <!-- Contact -->
-          <div class="form-section">
-            <h3>Your Info</h3>
-            <div class="field-row">
-              <div>
-                <label class="field-label">First Name *</label>
-                <input type="text" name="first_name" placeholder="Sarah" required />
-              </div>
-              <div>
-                <label class="field-label">Last Name</label>
-                <input type="text" name="last_name" placeholder="Johnson" />
-              </div>
-            </div>
-            <div class="field-row-single">
-              <label class="field-label">Email Address *</label>
-              <input type="email" name="email" placeholder="sarah@email.com" required />
-            </div>
-            <div class="field-row-single">
-              <label class="field-label">Phone (optional)</label>
-              <input type="tel" name="phone" placeholder="(509) 555-0000" />
-            </div>
-          </div>
-
-          <hr class="form-divider" />
-
-          <!-- Interest Level -->
-          <div class="form-section">
-            <h3>Where are you right now?</h3>
-            <span class="hint">Be honest, this helps me serve you well</span>
-            <input type="hidden" name="interest_level" id="interest_level_input" />
-            <div class="interest-cards">
-              <div class="interest-card" onclick="selectInterest(this,'ready')" data-value="ready">
-                <div class="radio-dot"><div class="radio-dot-inner"></div></div>
-                <div class="interest-card-text">
-                  <strong>Ready to invest</strong>
-                  <span>I'm in. Just tell me when and how much.</span>
-                </div>
-              </div>
-              <div class="interest-card" onclick="selectInterest(this,'waiting')" data-value="waiting">
-                <div class="radio-dot"><div class="radio-dot-inner"></div></div>
-                <div class="interest-card-text">
-                  <strong>Interested, waiting on details</strong>
-                  <span>Dates, cost, and logistics would help me decide.</span>
-                </div>
-              </div>
-              <div class="interest-card" onclick="selectInterest(this,'curious')" data-value="curious">
-                <div class="radio-dot"><div class="radio-dot-inner"></div></div>
-                <div class="interest-card-text">
-                  <strong>Just curious right now</strong>
-                  <span>Not ready yet, but I want to stay in the loop.</span>
-                </div>
-              </div>
-              <div class="interest-card" onclick="selectInterest(this,'free')" data-value="free">
-                <div class="radio-dot"><div class="radio-dot-inner"></div></div>
-                <div class="interest-card-text">
-                  <strong>Free resources first</strong>
-                  <span>I'd love to try before I buy.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <hr class="form-divider" />
-
-          <!-- Ages -->
-          <div class="form-section">
-            <h3>Your Children's Ages</h3>
-            <span class="hint">Select all that apply</span>
-            <input type="hidden" name="child_ages" id="ages_input" />
-            <div class="tag-group" id="ages-group">
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'ages_input')">Infant/Baby (0–1)</button>
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'ages_input')">Toddler (1–3)</button>
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'ages_input')">Preschool (3–5)</button>
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'ages_input')">Early Elementary (5–8)</button>
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'ages_input')">Elementary (8–12)</button>
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'ages_input')">Teen (12+)</button>
-            </div>
-          </div>
-
-          <hr class="form-divider" />
-
-          <!-- Struggles -->
-          <div class="form-section">
-            <h3>What brings you here?</h3>
-            <span class="hint">Check everything that resonates, be honest, this is a safe place</span>
-            <div class="check-grid">
-              <label class="check-label"><input type="checkbox" name="struggles" value="Tantrums & meltdowns" /><span>Tantrums & meltdowns</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Yelling & losing it" /><span>Yelling & losing it</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Defiance / not listening" /><span>Defiance / not listening</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Sibling conflict" /><span>Sibling conflict</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Bedtime & routines" /><span>Bedtime & routines</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Screen time battles" /><span>Screen time battles</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Big emotions / anxiety" /><span>Big emotions / anxiety</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Discipline without punishment" /><span>Discipline without punishment</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Constant power struggles" /><span>Constant power struggles</span></label>
-              <label class="check-label"><input type="checkbox" name="struggles" value="Feeling disconnected" /><span>Feeling disconnected from my kids</span></label>
-            </div>
-            <div>
-              <label class="field-label">Anything else on your heart?</label>
-              <textarea name="other_struggle" rows="3" placeholder="I feel like I'm failing..."></textarea>
-            </div>
-          </div>
-
-          <hr class="form-divider" />
-
-          <!-- Parenting Style -->
-          <div class="form-section">
-            <h3>How would you describe your current parenting style?</h3>
-            <div class="radio-group" style="margin-top:12px;">
-              <label class="check-label"><input type="radio" name="parenting_style" value="Mostly traditional / strict" /><span>Mostly traditional / strict</span></label>
-              <label class="check-label"><input type="radio" name="parenting_style" value="Mostly gentle / permissive" /><span>Mostly gentle / permissive</span></label>
-              <label class="check-label"><input type="radio" name="parenting_style" value="Mix of things, nothing feels consistent" /><span>Mix of things, nothing feels consistent</span></label>
-              <label class="check-label"><input type="radio" name="parenting_style" value="Authoritative (firm & warm)" /><span>Authoritative (firm & warm)</span></label>
-              <label class="check-label"><input type="radio" name="parenting_style" value="Honestly not sure. I just survive" /><span>Honestly not sure. I just survive</span></label>
-              <label class="check-label"><input type="radio" name="parenting_style" value="I've tried everything and I'm exhausted" /><span>I've tried everything and I'm exhausted</span></label>
-            </div>
-          </div>
-
-          <hr class="form-divider" />
-
-          <!-- Course Type -->
-          <div class="form-section">
-            <h3>Which course would be the best fit for you?</h3>
-            <span class="hint">I host two versions, one through local churches with faith woven in, and one community based on Positive Discipline alone. Both teach the same core toolkit.</span>
-            <div class="radio-group" style="margin-top:12px;">
-              <label class="check-label"><input type="radio" name="course_type" value="Christian-centered (church-hosted)" /><span><strong>Christian-centered</strong> — I'd love faith woven into the teaching</span></label>
-              <label class="check-label"><input type="radio" name="course_type" value="Either would work" /><span><strong>Either would work for me</strong> — put me wherever there's room</span></label>
-              <label class="check-label"><input type="radio" name="course_type" value="Positive Discipline only (non-religious)" /><span><strong>Positive Discipline only</strong> — I'd prefer the non-religious community course</span></label>
-            </div>
-          </div>
-
-          <hr class="form-divider" />
-
-          <!-- Childcare -->
-          <div class="form-section">
-            <h3>Would you need childcare provided?</h3>
-            <div class="info-box">
-              <strong>Good to know:</strong> Providing quality childcare adds approximately <strong>$10/session</strong> to the course cost. Your answer helps me decide whether to include it and price accordingly.
-            </div>
-            <div class="radio-group">
-              <label class="check-label"><input type="radio" name="childcare" value="Yes, I couldn't attend without it" /><span>Yes, I couldn't attend without it</span></label>
-              <label class="check-label"><input type="radio" name="childcare" value="Maybe, nice to have but not required" /><span>Maybe, nice to have but not required</span></label>
-              <label class="check-label"><input type="radio" name="childcare" value="No, I have childcare covered" /><span>No, I have childcare covered</span></label>
-            </div>
-          </div>
-
-          <hr class="form-divider" />
-
-          <!-- Days -->
-          <div class="form-section">
-            <h3>What days work best?</h3>
-            <span class="hint">Select all that could work</span>
-            <input type="hidden" name="preferred_days" id="days_input" />
-            <div class="day-group">
-              <button type="button" class="day-btn" onclick="toggleTag(this,'days_input')" data-label="Monday">M</button>
-              <button type="button" class="day-btn" onclick="toggleTag(this,'days_input')" data-label="Tuesday">T</button>
-              <button type="button" class="day-btn" onclick="toggleTag(this,'days_input')" data-label="Wednesday">W</button>
-              <button type="button" class="day-btn" onclick="toggleTag(this,'days_input')" data-label="Thursday">Th</button>
-              <button type="button" class="day-btn" onclick="toggleTag(this,'days_input')" data-label="Friday">F</button>
-              <button type="button" class="day-btn" onclick="toggleTag(this,'days_input')" data-label="Saturday">Sa</button>
-              <button type="button" class="day-btn" onclick="toggleTag(this,'days_input')" data-label="Sunday">Su</button>
-            </div>
-          </div>
-
-          <!-- Times -->
-          <div class="form-section">
-            <h3>What times work best?</h3>
-            <span class="hint">Select all that could work</span>
-            <input type="hidden" name="preferred_times" id="times_input" />
-            <div class="tag-group">
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'times_input')">Morning (9–11am)</button>
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'times_input')">Midday (11am–1pm)</button>
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'times_input')">Afternoon (1–3pm)</button>
-              <button type="button" class="tag-btn" onclick="toggleTag(this,'times_input')">Evening (6–8pm)</button>
-            </div>
-          </div>
-
-          <hr class="form-divider" />
-
-          <!-- Notes -->
-          <div class="form-section">
-            <h3>Anything else you want me to know?</h3>
-            <span class="hint">What are you hoping to walk away with?</span>
-            <textarea name="notes" rows="4" placeholder="I just want to stop dreading the hard moments..."></textarea>
-          </div>
-
-          <!-- How heard -->
-          <div class="form-section">
-            <h3>How did you hear about this?</h3>
-            <input type="text" name="how_heard" placeholder="Facebook group, friend, church, Instagram..." />
-          </div>
-
-          <button type="submit" class="submit-btn" id="submit-btn">Count Me In →</button>
-          <p class="submit-note">No commitment. No spam. Just a conversation about making parenting easier.</p>
-
-        </div><!-- /form-card -->
-      </form>
-    </div>
-  </div>
-</div><!-- /page-form -->
-
-
-<!-- SUCCESS PAGE -->
-<div id="page-success" class="page">
-  <div class="success-page">
-    <div class="success-inner scale-in">
-      <div class="success-emoji">🌱</div>
-      <h2 class="serif">You're on the list!</h2>
-      <p>I'll be in touch soon with details shaped around what actually works for the people who filled this out. That's the whole point of doing it this way.</p>
-      <div class="success-sig">Coach Jess</div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-  // PAGE NAVIGATION
-  function showPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    window.scrollTo(0, 0);
-  }
-
-  // INTEREST CARDS
-  function selectInterest(el, value) {
-    document.querySelectorAll('.interest-card').forEach(c => c.classList.remove('active'));
-    el.classList.add('active');
-    document.getElementById('interest_level_input').value = value;
-  }
-
-  // TOGGLE TAG/DAY BUTTONS
-  function toggleTag(btn, inputId) {
-    btn.classList.toggle('active');
-    const input = document.getElementById(inputId);
-    const label = btn.dataset.label || btn.innerText.trim();
-    let values = input.value ? input.value.split(', ').filter(Boolean) : [];
-    if (btn.classList.contains('active')) {
-      if (!values.includes(label)) values.push(label);
-    } else {
-      values = values.filter(v => v !== label);
-    }
-    input.value = values.join(', ');
-  }
-
-  // FORM SUBMISSION via Formspree
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    const form = document.getElementById('intake-form');
-    const data = new FormData(form);
-
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        showPage('page-success');
-      } else {
-        btn.disabled = false;
-        btn.textContent = 'Count Me In →';
-        alert('Something went wrong. Please try again or email me directly.');
-      }
-    } catch (err) {
-      btn.disabled = false;
-      btn.textContent = 'Count Me In →';
-      alert('Something went wrong. Please check your connection and try again.');
-    }
-  }
-</script>
+<footer>
+  Family Centered Parenting with Coach Jess · Ellensburg, WA
+</footer>
 
 </body>
 </html>
