@@ -338,6 +338,81 @@
     margin-top: 14px;
   }
 
+  /* ===== WAITLIST ===== */
+  .waitlist {
+    background: var(--pine);
+    color: var(--cream);
+    text-align: center;
+    padding: 70px 0 76px;
+  }
+  .waitlist .eyebrow { color: var(--violet-soft); display: block; margin-bottom: 10px; }
+  .waitlist h2 { color: var(--cream-light); font-size: clamp(1.5rem, 4.5vw, 2rem); }
+  .waitlist .wl-copy {
+    color: #CBD3C6;
+    max-width: 440px;
+    margin: 16px auto 30px;
+    font-size: 1.02rem;
+  }
+  .wl-form {
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+  }
+  .wl-input {
+    width: 100%;
+    font-family: 'Rosario', sans-serif;
+    font-size: 1rem;
+    padding: 15px 18px;
+    border-radius: 100px;
+    border: 1.5px solid rgba(242,237,225,0.35);
+    background: var(--cream-light);
+    color: var(--ink);
+  }
+  .wl-input:focus-visible { outline: 3px solid var(--violet-soft); outline-offset: 2px; }
+  .wl-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    font-size: 0.94rem;
+    color: var(--cream);
+    line-height: 1.4;
+    cursor: pointer;
+    padding: 0 6px;
+  }
+  .wl-check input {
+    width: 20px; height: 20px;
+    margin-top: 1px;
+    flex: 0 0 auto;
+    accent-color: var(--violet);
+    cursor: pointer;
+  }
+  .wl-btn {
+    margin-top: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .wl-fine {
+    text-align: center;
+    font-size: 0.82rem;
+    color: #8D9788;
+    margin-top: 2px;
+  }
+  .wl-thanks {
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--cream-light);
+    color: var(--pine);
+    border-radius: 12px;
+    padding: 28px 26px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+  }
+
   /* ===== SCROLL REVEAL ===== */
   .reveal {
     opacity: 0;
@@ -789,6 +864,29 @@
   </div>
 </section>
 
+<section class="waitlist">
+  <div class="wrap">
+    <p class="eyebrow reveal">Can't make these dates?</p>
+    <h2 class="reveal d1">Get on the list for the next one.</h2>
+    <p class="wl-copy reveal d2">More sessions are coming, and pricing will always stay as accessible as I can make it. Drop your email so you're first to know when the next dates open.</p>
+    <form class="wl-form reveal d3" action="https://formspree.io/f/xwvyykbg" method="POST">
+      <input type="hidden" name="_subject" value="New Family Reset waitlist signup">
+      <input type="hidden" name="source" value="Family Reset waitlist">
+      <input class="wl-input" type="email" name="email" placeholder="your@email.com" required>
+      <label class="wl-check">
+        <input type="checkbox" name="toolbox_newsletter" value="yes">
+        <span>Send me weekly parenting tools (Toolbox Tuesday newsletter)</span>
+      </label>
+      <label class="wl-check">
+        <input type="checkbox" name="one_on_one_interest" value="yes">
+        <span>I'm interested in learning more about 1:1 coaching</span>
+      </label>
+      <button class="btn btn-primary wl-btn" type="submit">Keep me posted</button>
+      <p class="wl-fine">No spam. Just the next dates and the occasional useful tool.</p>
+    </form>
+  </div>
+</section>
+
 <footer>
   <div class="brand">Legacy Parent<span class="idot">&#305;</span>ng</div>
   <div class="tagline">Raise them on purpose.</div>
@@ -859,6 +957,34 @@
       });
     }, { threshold: 0.4 });
     rings.forEach(function (r) { rio.observe(r); });
+  }
+  // Waitlist: submit via fetch so the person stays on the page
+  var wlForm = document.querySelector('.wl-form');
+  if (wlForm) {
+    wlForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var data = new FormData(wlForm);
+      var btn = wlForm.querySelector('.wl-btn');
+      if (btn) { btn.textContent = 'Adding you...'; btn.disabled = true; }
+      fetch(wlForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (r) {
+        if (r.ok) {
+          var t = document.createElement('div');
+          t.className = 'wl-thanks';
+          t.textContent = "You're on the list! I'll be in touch when the next dates open.";
+          wlForm.parentNode.replaceChild(t, wlForm);
+        } else {
+          if (btn) { btn.textContent = 'Keep me posted'; btn.disabled = false; }
+          alert('Something went wrong. You can also just text Jess at 503-332-9572.');
+        }
+      }).catch(function () {
+        if (btn) { btn.textContent = 'Keep me posted'; btn.disabled = false; }
+        alert('Something went wrong. You can also just text Jess at 503-332-9572.');
+      });
+    });
   }
 })();
 </script>
